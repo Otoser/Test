@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alcogol.Web", "Alcogol.Web\Alcogol.Web.csproj", "{3A6197B1-0E1C-4147-8259-35F1F09859F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlcogolDomain", "AlcogolDomain\AlcogolDomain.csproj", "{2EA8FD58-89CB-45A3-8FDC-460752589641}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlcogolRepository", "AlcogolRepository\AlcogolRepository.csproj", "{736E0F9D-72D6-4DCE-9FEA-FD93263913D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlcogolService", "AlcogolService\AlcogolService.csproj", "{EFC4ACE1-7865-4BE3-B279-2281925E71A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A6197B1-0E1C-4147-8259-35F1F09859F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A6197B1-0E1C-4147-8259-35F1F09859F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A6197B1-0E1C-4147-8259-35F1F09859F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A6197B1-0E1C-4147-8259-35F1F09859F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EA8FD58-89CB-45A3-8FDC-460752589641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EA8FD58-89CB-45A3-8FDC-460752589641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EA8FD58-89CB-45A3-8FDC-460752589641}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EA8FD58-89CB-45A3-8FDC-460752589641}.Release|Any CPU.Build.0 = Release|Any CPU
+		{736E0F9D-72D6-4DCE-9FEA-FD93263913D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{736E0F9D-72D6-4DCE-9FEA-FD93263913D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{736E0F9D-72D6-4DCE-9FEA-FD93263913D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{736E0F9D-72D6-4DCE-9FEA-FD93263913D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFC4ACE1-7865-4BE3-B279-2281925E71A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFC4ACE1-7865-4BE3-B279-2281925E71A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFC4ACE1-7865-4BE3-B279-2281925E71A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFC4ACE1-7865-4BE3-B279-2281925E71A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

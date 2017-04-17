@@ -1,0 +1,50 @@
+﻿@model AlcogolDomain.ProductsEntity
+@{
+    ViewBag.Title = "Админ панель: редактирование товара";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    AlcogolDomain.ManufacturerEntity[] manufacturerEntities = ViewBag.Manufacturers;
+}
+<div class="panel">
+    <div class="panel-heading">
+        <h3>Редактирование товара «@Model.Name»</h3>
+    </div>
+
+    @using (Html.BeginForm("Edit", "Admin",
+                                    FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="panel-body">
+            @Html.HiddenFor(m => m.Id)
+            @foreach (var property in ViewData.ModelMetadata.Properties)
+            {
+                switch (property.PropertyName)
+                {
+                    case "Id":
+                        break;
+                    case "ManufacturerEntityId":
+                        @Html.DropDownListFor(m => m.ManufacturerEntityId,
+                            manufacturerEntities.Select(man => new SelectListItem
+                            {
+                                Text = man.Name, Value = man.Id.ToString()
+                            }))
+                        break;
+                   
+                    default:
+                        <div class="form-group">
+                            <label>@(property.DisplayName ?? property.PropertyName)</label>
+                                @Html.TextBox(property.PropertyName, null,
+                                    new { @class = "form-control" })
+                            @Html.ValidationMessage(property.PropertyName)
+                        </div>
+                        break;
+                }
+            }
+        </div>
+        <div class="panel-footer">
+            <input type="submit" value="Сохранить" class="btn btn-primary" />
+            @Html.ActionLink("Отменить изменения и вернуться к списку", "Index", null, new
+       {
+           @class = "btn btn-default"
+       })
+        </div>
+    }
+</div>

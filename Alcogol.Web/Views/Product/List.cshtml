@@ -1,0 +1,29 @@
+﻿@using AlcogolDomain;
+@model IEnumerable<ProductsEntity>
+@{
+    ViewBag.Title = "Товары";
+}
+
+    <div class="row">
+        <div class="col-lg-5">
+            @foreach (var p in @Model)
+            {
+                <div class="panel panel-default" style="padding: 7px">
+                    <div class="row">
+                        <!-- Это для вставки картинки
+                        <div class="col-lg-6">
+                            <img src="~/Images/Lim.jpg"/>
+                        </div>-->
+                        <div class="col-lg-6">
+                            <h3>Название: @p.Name</h3>
+                            <h4>Цена: @p.Price.ToString("# руб")</h4>
+                            <h4>Выдержка: @p.Excerpt</h4>
+                            @Ajax.ActionLink("Добавить в корзину", "AddToCart", "Cart", new { id = p.Id, amount = 1, man = p.ManufacturerEntityId, name = p.Name,price =p.Price, excerpt = p.Excerpt}, new AjaxOptions (), new { @class = "btn btn-info" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1">
+                </div>
+            }
+        </div>
+    </div>

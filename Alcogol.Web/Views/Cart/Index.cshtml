@@ -1,0 +1,31 @@
+﻿@using AlcogolDomain;
+@model IList<ProductsEntity>
+@{
+    ViewBag.Title = "Товары";
+}
+@if (Model.Count() == 0)
+{
+    <center><h1>У вас еще нет товаров!</h1></center>
+}
+<div class="row">
+    <div class="col-lg-5">
+        @foreach (var p in @Model)
+            {
+            <div class="panel panel-default" style="padding: 7px">
+                <div class="row">
+                    <!-- Это для вставки картинки
+                    <div class="col-lg-6">
+                        <img src="~/Images/Lim.jpg"/>
+                    </div>-->
+                    <div class="col-lg-6">
+                        <h3>Название: @p.Name</h3>
+                        <h4>Цена: @p.Price.ToString("# руб")</h4>
+                        <h4>Выдержка: @p.Excerpt</h4>
+                    </div>
+                </div>
+            </div>
+                <div class="col-lg-1">
+                </div>
+        }
+    </div>
+</div>
